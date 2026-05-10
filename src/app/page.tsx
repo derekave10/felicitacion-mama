@@ -27,7 +27,8 @@ export default function Page() {
           src="/images/portada.jpg"
           alt="Portada Día de las Madres"
           fill
-          className="object-cover object-top"
+          className="object-cover"
+          style={{ objectPosition: "center 65%" }}
           priority
           sizes="100vw"
         />
