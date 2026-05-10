@@ -28,7 +28,7 @@ export default function Page() {
           alt="Portada Día de las Madres"
           fill
           className="object-cover"
-          style={{ objectPosition: "center 65%" }}
+          style={{ objectPosition: "center 85%" }}
           priority
           sizes="100vw"
         />
