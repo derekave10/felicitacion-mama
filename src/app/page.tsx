@@ -59,8 +59,8 @@ export default function Page() {
             Mamá
           </h1>
           <p
-            className="font-nunito text-lg mt-4 text-white/90 animate-fade-in-up-delay-2"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+            className="font-nunito mt-4 text-white/90 animate-fade-in-up-delay-2"
+            style={{ fontSize: "clamp(1rem, 4vw, 1.25rem)", textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
             La persona más importante de mi vida
           </p>
@@ -102,7 +102,7 @@ export default function Page() {
             style={{ fontSize: "clamp(1rem, 4.5vw, 1.15rem)", lineHeight: 1.8 }}
           >
             <p>
-              Mamá Evelyn, no existen palabras que alcancen para decirte todo
+              Mamá, no existen palabras que alcancen para decirte todo
               lo que significas para mí.
             </p>
 
@@ -114,7 +114,7 @@ export default function Page() {
 
             <p>
               Todo lo que soy, cada logro, cada sonrisa, cada fuerza que
-              encuentro cuando la vida se pone difícil — todo viene de ti.
+              encuentro cuando la vida se pone difícil, todo viene de ti.
               Eres mi raíz y mi refugio.
             </p>
 
