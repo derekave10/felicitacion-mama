@@ -3,11 +3,9 @@ import MusicPlayer from "@/components/MusicPlayer";
 
 const galleryPhotos = [
   { src: "/images/foto01.jpg", alt: "Recuerdo especial" },
-  { src: "/images/foto02.jpg", alt: "Momento juntos" },
   { src: "/images/foto03.jpg", alt: "Recuerdo especial" },
   { src: "/images/foto04.jpg", alt: "Momento juntos" },
   { src: "/images/foto05.jpg", alt: "Recuerdo especial" },
-  { src: "/images/foto06.jpg", alt: "Momento juntos" },
   { src: "/images/foto07.jpg", alt: "Recuerdo especial" },
   { src: "/images/foto08.jpg", alt: "Momento juntos" },
   { src: "/images/foto09.jpg", alt: "Recuerdo especial" },
@@ -26,10 +24,10 @@ export default function Page() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative w-full" style={{ minHeight: "100svh" }}>
         <Image
-          src="/images/portada.png"
+          src="/images/portada.jpg"
           alt="Portada Día de las Madres"
           fill
-          className="object-cover object-center"
+          className="object-cover object-top"
           priority
           sizes="100vw"
         />
@@ -53,12 +51,12 @@ export default function Page() {
           <h1
             className="font-dancing animate-fade-in-up-delay-1"
             style={{
-              fontSize: "clamp(3rem, 14vw, 7rem)",
+              fontSize: "clamp(3.5rem, 16vw, 7rem)",
               lineHeight: 1.1,
               textShadow: "0 4px 20px rgba(0,0,0,0.4)",
             }}
           >
-            Mamá Evelyn
+            Mamá
           </h1>
           <p
             className="font-nunito text-lg mt-4 text-white/90 animate-fade-in-up-delay-2"

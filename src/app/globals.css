@@ -120,10 +120,10 @@ body {
 /* Photo gallery masonry columns */
 .gallery-columns {
   columns: 1;
-  column-gap: 1rem;
+  column-gap: 0.75rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .gallery-columns {
     columns: 2;
   }
@@ -137,5 +137,18 @@ body {
 
 .gallery-item {
   break-inside: avoid;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 639px) {
+  .gallery-item img {
+    border-radius: 1rem;
+  }
+}
+
+/* Prevent text size adjustment on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }

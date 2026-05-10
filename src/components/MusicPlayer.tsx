@@ -8,6 +8,7 @@ export default function MusicPlayer() {
   const [hasStarted, setHasStarted] = useState(false);
 
   const handleStart = async () => {
+    window.scrollTo({ top: 0, behavior: "instant" });
     try {
       if (audioRef.current) {
         audioRef.current.volume = 0.7;
@@ -43,15 +44,15 @@ export default function MusicPlayer() {
           aria-label="Toca para comenzar"
           className="fixed inset-0 z-50 flex flex-col items-center justify-center cursor-pointer select-none"
           style={{
-            background:
-              "linear-gradient(135deg, #9f1239 0%, #be123c 30%, #e11d48 60%, #fb7185 100%)",
+            backgroundImage:
+              "linear-gradient(rgba(100,10,30,0.72), rgba(159,18,57,0.80)), url('/images/caratula.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           {/* Animated ring */}
-          <div className="relative flex items-center justify-center mb-8">
-            <div
-              className="absolute w-32 h-32 rounded-full bg-white/20 animate-ripple"
-            />
+          <div className="relative flex items-center justify-center mb-6">
+            <div className="absolute w-32 h-32 rounded-full bg-white/20 animate-ripple" />
             <div
               className="absolute w-32 h-32 rounded-full bg-white/10 animate-ripple"
               style={{ animationDelay: "0.9s" }}
@@ -62,18 +63,35 @@ export default function MusicPlayer() {
           </div>
 
           <p
-            className="font-dancing text-white text-4xl mb-3 animate-fade-in"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+            className="font-dancing text-white animate-fade-in mb-1"
+            style={{
+              fontSize: "clamp(1.6rem, 8vw, 2.8rem)",
+              textShadow: "0 2px 12px rgba(0,0,0,0.5)",
+            }}
           >
-            Para ti, Mamá Evelyn
-          </p>
-          <p className="font-nunito text-white/80 text-base mb-10 animate-fade-in">
-            Toca para comenzar
+            De Derek, para ti
           </p>
 
-          <div className="flex flex-col items-center gap-2 animate-fade-in-up-delay-1">
-            <div className="w-px h-8 bg-white/40" />
-            <span className="text-white/60 text-sm font-nunito">❤️ Día de las Madres ❤️</span>
+          <p
+            className="font-nunito text-white/70 text-sm mb-6 animate-fade-in px-6 text-center"
+            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
+          >
+            ❤️ Día de las Madres ❤️
+          </p>
+
+          {/* Volume tip */}
+          <div
+            className="font-nunito text-white/80 text-sm mb-8 px-8 py-3 rounded-full animate-fade-in text-center"
+            style={{ background: "rgba(255,255,255,0.12)" }}
+          >
+            🔊 Sube el volumen para disfrutarlo al máximo
+          </div>
+
+          <div
+            className="font-nunito font-semibold text-white px-8 py-3 rounded-full animate-fade-in-up-delay-1"
+            style={{ background: "rgba(255,255,255,0.22)", fontSize: "1rem" }}
+          >
+            Toca para comenzar
           </div>
         </div>
       )}
